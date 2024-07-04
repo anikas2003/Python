@@ -79,3 +79,8 @@ print("Getting the current length of the list: ")
 list2_length = list2.length()
 print(list2_length)
 print("\n")
+
+print(f"Getting list2[5]: {list2.getValue(5)}")
+print(f"Getting list2[0]: {list2.getValue(0)}")
+print(f"Getting list2[102]: {list2.getValue(102)}")
+print(f"Getting list2[3]: {list2.getValue(3)}")

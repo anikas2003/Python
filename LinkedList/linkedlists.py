@@ -33,6 +33,7 @@ class LinkedList:
     # delete the first node of the list
     def deleteFirst(self) -> None:
         list = self.head
+
         if list is not None:
             self.head = list.next
         else:
@@ -101,6 +102,22 @@ class LinkedList:
             traverser = traverser.next
         insert = Node(data, traverser)
         pre_traverser.next = insert
+
+    # get node given index (for stack/queue operations)
+    def getValue(self, index):
+        if self.head is None:
+            print("Err: You cannot get value from an empty list.")
+            return 
+        if index > self.length() or index < 0:
+            print("Err: The index you've provided is too high or low.")
+            return
+        else:
+            if index == 0:
+                return self.head.data
+            curr = self.head
+            for i in range(0, index):
+                curr = curr.next
+            return curr.data
         
 
     # delete node at specific position
