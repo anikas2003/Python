@@ -18,7 +18,7 @@ class Queue:
     def isEmpty(self) -> None:
         return True if len(self.queue) == 0 else False
     def peek(self):
-        return self.stack[0]
+        return self.queue[0]
     def length(self):
         return len(self.queue)
     def display(self):
@@ -30,17 +30,23 @@ queueA = Queue()
 queueA.dequeue()
 queueA.enqueue(5)
 queueA.display()
+print(f"\nLength: {queueA.length()}")
 print("\n")
 queueA.enqueue(6)
 queueA.enqueue(7)
 queueA.enqueue(17)
 queueA.enqueue(3)
 queueA.display()
+print(f"\nLength: {queueA.length()}")
 print("\n")
 queueA.dequeue()
 queueA.display()
+print(f"\nLength: {queueA.length()}")
 print("\n")
 queueA.dequeue()
 queueA.display()
+print(f"\nLength: {queueA.length()}")
 print("\n")
+print(f"Peek: {queueA.peek()}")
+print(f"Is Empty? {queueA.isEmpty()}")
     
